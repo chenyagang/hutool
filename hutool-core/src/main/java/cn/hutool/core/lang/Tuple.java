@@ -47,6 +47,32 @@ public class Tuple extends CloneSupport<Tuple> implements Iterable<Object>, Seri
 	}
 	
 	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.deepHashCode(members);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Tuple other = (Tuple) obj;
+		if (false == Arrays.deepEquals(members, other.members)) {
+			return false;
+		}
+		return true;
+	}
+
+	@Override
 	public String toString() {
 		return Arrays.toString(members);
 	}

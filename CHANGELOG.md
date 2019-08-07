@@ -6,6 +6,8 @@
 ## 4.6.2
 
 ### 新特性
+* 【core】         Tuple增加支持equals和hashcode（issue#469@Github）
+
 ### Bug修复
 
 -------------------------------------------------------------------------------------------------------------
@@ -13,7 +15,7 @@
 ## 4.6.0
 
 ### 新特性
-* 【all  】         增加hutool-bom模块，用于可排除的依赖引入
+* 【all】           增加hutool-bom模块，用于可排除的依赖引入
 * 【core】         ResourceUtil增加readBytes方法
 * 【captcha】   更换为逻辑字体
 * 【extra】       Mail增加reply（issue#445@Github）
